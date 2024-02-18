@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="heading">
+        <h1>User Search</h1>
+    </div>
+    <div class="searchBox">
+        <mat-form-field>
+            <input type="text" placeholder="Search user" matInput [formControl]="searchControl"
+                [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onSelectionChange($event.option.value)">
+                <mat-option *ngFor="let user of filteredUsers | async" [value]="user">
+                    {{ user.name }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+
+    <!-- <button class="btn">Continue</button> -->
+    <button  class="btn" (click)="onContinue()" [disabled]="!isUserSelected">Continue</button>
+    <router-outlet></router-outlet>
+</div>
+

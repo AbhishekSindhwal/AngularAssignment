@@ -1,0 +1,23 @@
+
+.btn{
+    background-color: #265073;
+    height: 50px;
+    width: 150px;
+    margin-left: 400px;
+    margin-bottom: 50px;
+    border-radius: 5%;
+}
+
+.child{
+    display: flex;
+}
+.complaints{
+    margin-left: 100px;
+}
+.container{
+    background-color:  #8CB9BD;
+}
+
+.heading{
+    margin-left: 100px;
+}

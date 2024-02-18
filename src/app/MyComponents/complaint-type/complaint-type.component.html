@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="heading">Please select the type of complain you want to file</h1>
+    <div class="complaints">
+        <mat-radio-group aria-label="Select an option" (change)="onSelectionChange($event)">
+            <mat-radio-button value="1" class="child">Product Or Service Quality</mat-radio-button>
+            <mat-radio-button value="2" class="child">Unavailable or Out of Stock</mat-radio-button>
+            <mat-radio-button value="3" class="child">Delivery</mat-radio-button>
+            <mat-radio-button value="4" class="child">Long Wait Time</mat-radio-button>
+            <mat-radio-button value="5" class="child">Other</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <button  class="btn" (click)="onContinue1()"  [disabled]="!isOptionSelected">Continue</button>
+    <router-outlet></router-outlet>
+</div>
